@@ -3,7 +3,7 @@ import Header from './components/header/header';
 import './App.css';
  import SimpleBottomNavigation from './components/MainNav.js';
 import { Container } from '@mui/system';
-import Trending from './components/Trending/Trending';
+import Trending from './components/Trending/trending';
 import Movies from './components/Movies/Movies';
 import Series from './components/Series/Series';
 import Search from './components/Search/Search';
@@ -15,11 +15,12 @@ function App() {
       <Header/>
     <div className="App">
       <Container>
+    
        <Routes>
-        <Route path='/' component={Trending} exact/>
-        <Route path='/movies' component={Movies} />
-        <Route path='/series' component={Series} />
-        <Route path='/search' component={Search} />
+        <Route path='/' element={<Trending/>} exact/>
+        <Route path='/movies' element={<Movies/>} />
+        <Route path='/series' element={<Series/>} />
+        <Route path='/search' element={<Search/>} />
        </Routes>
 
         
